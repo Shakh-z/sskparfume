@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0805"><meta name="description" content="A Sword in a Sheep — коллекция ароматов Eros, Ares, Apollo"><title>A Sword in a Sheep</title>
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/cormorant-garamond-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorant-garamond-cyrillic-400-italic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorant-garamond-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-600-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-display:swap;src:url(assets/fonts/cormorant-garamond-cyrillic-600-italic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/jost-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/jost-cyrillic-300-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/jost-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/jost-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+:root{--bg:#0b0805;--gold:#d4af37;--ivory:#eadfc6;--glow:rgba(212,175,55,.16);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(ellipse at 50% 55%,var(--glow),transparent 62%),var(--bg);color:var(--ivory);font-family:'Jost',sans-serif;font-weight:300;transition:background .8s}
+#scroller{height:480vh;height:480dvh}
+#stage{position:fixed;inset:0;pointer-events:none;touch-action:auto}
+#stage.on{pointer-events:auto;touch-action:none;cursor:grab}
+canvas{display:block;width:100%;height:100%}
+.ov{position:fixed;left:0;right:0;padding:0 7vw;pointer-events:none;opacity:0;transition:opacity .5s}
+.ov.show{opacity:1}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--gold)}
+h1{font-style:italic;font-size:clamp(2.6rem,9vw,6.4rem);line-height:1}
+.hero{top:9vh;text-align:center}
+.hero p{margin-top:1rem;letter-spacing:.2em;font-size:.8rem}
+.hint{bottom:7vh;text-align:center;font-size:.8rem;letter-spacing:.15em}
+.concept{top:14vh;max-width:560px;font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,3.4vw,2rem);line-height:1.35}
+.concept b{font-weight:600;color:var(--gold)}
+.choose{bottom:6vh;text-align:center}
+.choose h2{font-style:italic;font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:.9rem}
+.btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+button{pointer-events:auto;font:inherit;cursor:pointer;background:rgba(11,8,5,.6);color:var(--gold);border:1px solid var(--gold);padding:.7rem 1.4rem;font-size:1rem;letter-spacing:.08em;transition:background .25s,color .25s}
+button:hover,button:focus-visible{background:var(--gold);color:#0b0805;outline:none}
+#panel{position:fixed;right:6vw;top:50%;transform:translateY(-50%);width:min(380px,88vw);opacity:0;pointer-events:none;transition:opacity .6s .3s}
+#panel.show{opacity:1}
+#panel h2{font-style:italic;font-size:3.4rem;line-height:1}
+#panel .sub{margin:.4rem 0 1.2rem;letter-spacing:.14em;font-size:.82rem;color:var(--gold)}
+#panel p{line-height:1.65;margin-bottom:.9rem}
+#panel .meta{font-size:.9rem;opacity:.85}
+#panel button{margin-top:.8rem}
+.credit{position:fixed;bottom:8px;left:0;right:0;text-align:center;font-size:.65rem;opacity:.35;pointer-events:none}
+#loader{position:fixed;inset:0;height:100dvh;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9;transition:opacity 1s}
+#loader span{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:2rem}
+@media(max-width:800px){
+#panel{right:auto;left:0;top:auto;bottom:0;transform:none;width:100%;padding:3.2rem 7vw calc(1.4rem + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,rgba(11,8,5,.96) 55%,rgba(11,8,5,0));max-height:52dvh}
+#panel h2{font-size:2.5rem}#panel .sub{margin:.3rem 0 .7rem;font-size:.75rem}
+#panel p{font-size:.92rem;line-height:1.5;margin-bottom:.4rem}#panel .meta{font-size:.82rem}
+#panel button{width:100%;min-height:46px;margin-top:.6rem}
+.hero{top:calc(8dvh + env(safe-area-inset-top,0px))}.hero p{font-size:.7rem}
+.hint{bottom:calc(6dvh + env(safe-area-inset-bottom,0px));font-size:.72rem}
+.concept{top:calc(11dvh + env(safe-area-inset-top,0px));font-size:1.35rem}
+.choose{bottom:calc(5dvh + env(safe-area-inset-bottom,0px))}
+.btns button{flex:1 1 28%;min-height:48px;padding:.6rem .4rem}
+.credit{display:none}}
+@media(max-width:800px) and (orientation:landscape){#panel{max-height:70dvh;width:50%;left:auto;right:0;background:rgba(11,8,5,.85)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="loader"><span>A Sword in a Sheep</span></div>
+<div id="stage"></div>
+<div id="scroller"></div>
+
+<div class="ov hero show" id="hero"><h1>A Sword in a Sheep</h1><p>Коллекция из трёх ароматов</p></div>
+<div class="ov hint show" id="hint">Листайте вниз, чтобы открыть коробку</div>
+<div class="ov concept" id="concept"><b>Орудие</b> — жизненный путь человека.<br><b>Овца</b> — цель, к которой он идёт.<br>Цель достигается только на пути к ней.</div>
+<div class="ov choose" id="choose"><h2>Выберите аромат</h2><div class="btns" id="btns"></div></div>
+
+<div id="panel">
+  <h2 id="pName"></h2>
+  <div class="sub" id="pSub"></div>
+  <p id="pDesc"></p>
+  <p class="meta" id="pNotes"></p>
+  <p class="meta" id="pTool"></p>
+  <button id="back">Назад к коробке</button>
+</div>
+<div class="credit">A Sword in a Sheep</div>
+
+<script src="assets/three.min.js"></script>
+<script>
+const SCENTS=[
+ {id:'eros',name:'Eros',sub:'Reminiscence · Послевкусие',notes:'Ноты: бергамот',tool:'Орудие: сердце-корона',
+  desc:'Послевкусие обладания. Когда тело уже успокоилось, а внутри всё ещё звучит эхо. Ты не хочешь больше — ты помнишь. И это воспоминание слаще самого момента.',
+  liquid:0xe6b422,glow:'rgba(230,180,34,.22)',x:-1.15},
+ {id:'ares',name:'Ares',sub:'Pacification · Умиротворение',notes:'Ноты: какао, шоколад',tool:'Орудие: меч',
+  desc:'Всё позади, и некуда больше бежать. Ты достиг своей цели, и морозным утром, попивая тёплое какао, ты понимаешь: ты смог.',
+  liquid:0x3b1d11,glow:'rgba(120,64,36,.30)',x:0},
+ {id:'apollo',name:'Apollo',sub:'Prayer · Молитва',notes:'Ноты: выпечка, мёд, корица',tool:'Орудие: стрела',
+  desc:'Молитва на будущую жизнь. Боязнь Божьей кары.',
+  liquid:0xb4651f,glow:'rgba(184,104,36,.28)',x:1.15}
+];
+const $=id=>document.getElementById(id);
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+
+// ---------- renderer ----------
+const stage=$('stage');
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<800?1.5:2));
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;
+renderer.outputEncoding=THREE.sRGBEncoding;
+stage.appendChild(renderer.domElement);
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(35,1,.1,60);
+
+// procedural studio reflections (no external HDRI needed)
+(function(){
+ const e=new THREE.Scene();
+ e.add(new THREE.Mesh(new THREE.BoxGeometry(24,24,24),new THREE.MeshBasicMaterial({color:0x1a110a,side:THREE.BackSide})));
+ const panel=(c,w,h,x,y,z)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:c,side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,0,0);e.add(m)};
+ panel(0xfff2dc,9,5,-8,6,6);panel(0xffe2b0,3,10,9,2,3);panel(0xffffff,10,2,0,10,-2);panel(0xc98a3a,6,4,0,-3,9);panel(0xfff6e8,2,8,-10,0,-4);
+ const p=new THREE.PMREMGenerator(renderer);scene.environment=p.fromScene(e,.03).texture;
+})();
+scene.add(new THREE.AmbientLight(0xffffff,.25));
+const key=new THREE.DirectionalLight(0xffe6bd,1.3);key.position.set(4,8,6);scene.add(key);
+const rim=new THREE.PointLight(0xd4af37,1.2,20);rim.position.set(-4,3,-3);scene.add(rim);
+
+// ---------- helpers ----------
+function roundedShape(w,h,r){const s=new THREE.Shape(),x=-w/2,y=-h/2;
+ s.moveTo(x+r,y);s.lineTo(x+w-r,y);s.quadraticCurveTo(x+w,y,x+w,y+r);s.lineTo(x+w,y+h-r);s.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+ s.lineTo(x+r,y+h);s.quadraticCurveTo(x,y+h,x,y+h-r);s.lineTo(x,y+r);s.quadraticCurveTo(x,y,x+r,y);return s}
+function rbox(w,h,d,r,bevel,seg){const g=new THREE.ExtrudeGeometry(roundedShape(w,h,r),{depth:d-bevel*2,bevelEnabled:true,bevelThickness:bevel,bevelSize:bevel,bevelSegments:seg||4,curveSegments:10});g.translate(0,0,-(d-bevel*2)/2);return g}
+
+function drawGlyph(c,k,x,y,s){c.save();c.translate(x,y);c.scale(s,s);c.strokeStyle=c.fillStyle='#d4af37';c.lineWidth=3;c.lineCap='round';
+ if(k==='eros'){c.beginPath();c.moveTo(0,10);c.bezierCurveTo(-26,-8,-12,-26,0,-10);c.bezierCurveTo(12,-26,26,-8,0,10);c.fill();c.beginPath();c.moveTo(-18,34);c.quadraticCurveTo(-30,14,-14,8);c.moveTo(18,34);c.quadraticCurveTo(30,14,14,8);c.moveTo(-18,34);c.lineTo(18,34);c.stroke()}
+ if(k==='ares'){c.beginPath();c.moveTo(0,-30);c.lineTo(0,34);c.moveTo(-14,-4);c.lineTo(14,-4);c.stroke();c.beginPath();c.arc(0,-33,3,0,7);c.fill()}
+ if(k==='apollo'){c.beginPath();c.moveTo(-24,28);c.lineTo(24,-24);c.stroke();c.beginPath();c.moveTo(24,-24);c.lineTo(10,-22);c.lineTo(22,-10);c.fill();c.beginPath();c.moveTo(-24,28);c.lineTo(-30,18);c.moveTo(-24,28);c.lineTo(-14,32);c.moveTo(-17,22);c.lineTo(-23,12);c.moveTo(-17,22);c.lineTo(-7,26);c.stroke()}
+ c.restore()}
+
+function labelTexture(sc){
+ const cv=document.createElement('canvas');cv.width=512;cv.height=600;const c=cv.getContext('2d');
+ const tex=new THREE.CanvasTexture(cv);tex.encoding=THREE.sRGBEncoding;tex.anisotropy=8;
+ const draw=()=>{
+  const g=c.createLinearGradient(0,0,512,600);g.addColorStop(0,'#17100a');g.addColorStop(1,'#050403');c.fillStyle=g;c.fillRect(0,0,512,600);
+  const gold=c.createLinearGradient(0,0,512,0);gold.addColorStop(0,'#8a6a1c');gold.addColorStop(.5,'#f3d77a');gold.addColorStop(1,'#a07a22');
+  c.strokeStyle=gold;c.lineWidth=5;c.strokeRect(22,22,468,556);c.lineWidth=1.5;c.strokeRect(36,36,440,528);
+  c.fillStyle=gold;c.textAlign='center';
+  c.font='italic 600 120px "Cormorant Garamond",Georgia,serif';c.fillText(sc.name,256,300);
+  c.font='italic 34px "Cormorant Garamond",Georgia,serif';c.fillText(sc.sub.split(' · ')[0],256,350);
+  c.font='300 20px Jost,sans-serif';c.fillText('A SWORD IN A SHEEP',256,545);
+  drawGlyph(c,sc.id,256,160,1.5);
+  tex.needsUpdate=true};
+ draw();if(document.fonts)document.fonts.load('italic 600 40px "Cormorant Garamond"').then(draw);
+ return tex}
+
+// ---------- bottle (built entirely in code) ----------
+const goldMat=new THREE.MeshStandardMaterial({color:0xd4af37,metalness:1,roughness:.2,envMapIntensity:1.7});
+const bottles=[];
+function makeBottle(sc){
+ const outer=new THREE.Group(),pivot=new THREE.Group();outer.add(pivot);
+ const W=1.0,H=1.15,D=.58;
+ const glass=new THREE.MeshPhysicalMaterial({color:0xdfe9e4,transparent:true,opacity:.26,roughness:.03,metalness:0,clearcoat:1,clearcoatRoughness:.03,envMapIntensity:2.2,side:THREE.DoubleSide,depthWrite:false});
+ const body=new THREE.Mesh(rbox(W,H,D,.14,.05),glass);body.position.y=.575;body.renderOrder=3;
+ const thick=new THREE.Mesh(rbox(W-.3,.2,D-.3,.06,.02,2),new THREE.MeshPhysicalMaterial({color:0xcfe3da,transparent:true,opacity:.45,roughness:.05,envMapIntensity:2}));thick.position.y=.2;thick.renderOrder=2;
+ const liq=new THREE.Mesh(rbox(W-.18,H-.34,D-.18,.1,.03),new THREE.MeshPhysicalMaterial({color:sc.liquid,roughness:.12,transmission:0,transparent:true,opacity:.92,emissive:sc.liquid,emissiveIntensity:.18,envMapIntensity:1.2,clearcoat:1}));liq.position.y=.62;
+ const labelMat=new THREE.MeshStandardMaterial({map:labelTexture(sc),roughness:.35,metalness:.25,envMapIntensity:1});
+ const label=new THREE.Mesh(new THREE.PlaneGeometry(.78,.9),labelMat);label.position.set(0,.6,D/2+.002);label.renderOrder=4;
+ const neckGlass=new THREE.Mesh(new THREE.CylinderGeometry(.13,.15,.22,32),glass);neckGlass.position.y=H+.1;
+ const collar=new THREE.Mesh(new THREE.CylinderGeometry(.2,.2,.1,48),goldMat);collar.position.y=H+.2;
+ const cap=new THREE.Mesh(new THREE.CylinderGeometry(.19,.19,.8,64),goldMat);cap.position.y=H+.65;
+ const capTop=new THREE.Mesh(new THREE.CylinderGeometry(.19,.19,.02,64),new THREE.MeshStandardMaterial({color:0xf0cf6a,metalness:1,roughness:.1}));capTop.position.y=H+1.05;
+ [liq,thick,label,neckGlass,collar,cap,capTop,body].forEach(m=>{m.userData.root=outer;pivot.add(m)});
+ pivot.position.y=-1.05;
+ outer.userData={sc,pivot,sel:0};return outer}
+
+// ---------- gift box ----------
+const boxG=new THREE.Group();scene.add(boxG);
+const matteBlack=new THREE.MeshStandardMaterial({color:0x151517,roughness:.75,metalness:.05,envMapIntensity:.6});
+const add=(g,m,x,y,z)=>{const o=new THREE.Mesh(g,m);o.position.set(x,y,z);boxG.add(o);return o};
+add(new THREE.BoxGeometry(4,.1,3),matteBlack,0,.05,0);
+add(new THREE.BoxGeometry(4,1.1,.1),matteBlack,0,.55,1.45);add(new THREE.BoxGeometry(4,1.1,.1),matteBlack,0,.55,-1.45);
+add(new THREE.BoxGeometry(.1,1.1,3),matteBlack,1.95,.55,0);add(new THREE.BoxGeometry(.1,1.1,3),matteBlack,-1.95,.55,0);
+// silk
+const sg=new THREE.PlaneGeometry(3.8,2.8,48,36);sg.rotateX(-Math.PI/2);
+const sp=sg.attributes.position;for(let i=0;i<sp.count;i++){const x=sp.getX(i),z=sp.getZ(i);sp.setY(i,Math.sin(x*2.1+z*1.3)*.07+Math.sin(x*5.2-z*3.1)*.03+Math.cos(z*3.7)*.04)}
+sg.computeVertexNormals();
+const silk=add(sg,new THREE.MeshStandardMaterial({color:0x17171b,roughness:.28,metalness:.15,envMapIntensity:1.6}),0,.6,0);
+// lid with hinge at the back edge
+const hinge=new THREE.Group();hinge.position.set(0,1.1,-1.5);boxG.add(hinge);
+const lid=new THREE.Mesh(new THREE.BoxGeometry(4.1,.4,3.1),matteBlack);lid.position.set(0,.2,1.5);hinge.add(lid);
+(function(){const cv=document.createElement('canvas');cv.width=cv.height=512;const c=cv.getContext('2d');
+ c.clearRect(0,0,512,512);drawGlyph(c,'ares',256,256,3.2);drawGlyph(c,'eros',130,256,2.4);drawGlyph(c,'apollo',382,256,2.4);
+ const t=new THREE.CanvasTexture(cv);t.encoding=THREE.sRGBEncoding;
+ const m=new THREE.Mesh(new THREE.PlaneGeometry(1.8,1.8),new THREE.MeshBasicMaterial({map:t,transparent:true,opacity:.9}));
+ m.rotation.x=-Math.PI/2;m.position.set(0,.405,1.5);hinge.add(m)})();
+
+SCENTS.forEach((sc,i)=>{const b=makeBottle(sc);b.scale.setScalar(.001);scene.add(b);bottles.push(b)});
+
+// ---------- UI ----------
+const btns=$('btns');
+SCENTS.forEach((sc,i)=>{const b=document.createElement('button');b.textContent=sc.name;b.onclick=e=>{e.stopPropagation();select(i)};btns.appendChild(b)});
+let sel=-1,p=0,ps=0,rotY=0,vel=0,dragging=false,lastX=0,moved=0,mx=0;
+function select(i){
+ sel=i;const s=SCENTS[i];
+ $('pName').textContent=s.name;$('pSub').textContent=s.sub;$('pDesc').textContent=s.desc;$('pNotes').textContent=s.notes;$('pTool').textContent=s.tool;
+ document.documentElement.style.setProperty('--glow',s.glow);
+ $('panel').classList.add('show');stage.classList.add('on');document.body.style.overflow='hidden';
+ bottles[i].userData.spin=0;rotY=0;vel=.01;
+ ['hero','hint','concept','choose'].forEach(k=>$(k).classList.remove('show'));
+}
+function deselect(){
+ sel=-1;$('panel').classList.remove('show');stage.classList.remove('on');document.body.style.overflow='';
+ document.documentElement.style.setProperty('--glow','rgba(212,175,55,.16)');
+}
+$('back').onclick=deselect;
+addEventListener('keydown',e=>{if(e.key==='Escape'&&sel>-1)deselect()});
+stage.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;moved=0;stage.setPointerCapture(e.pointerId);stage.style.cursor='grabbing'});
+stage.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastX;lastX=e.clientX;rotY+=dx*.012;vel=dx*.012});
+stage.addEventListener('pointerup',()=>{dragging=false;stage.style.cursor='grab'});
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5});
+
+// pick a bottle by clicking it in the open box
+const ray=new THREE.Raycaster(),v2=new THREE.Vector2();
+addEventListener('click',e=>{
+ if(sel>-1||p<.85||e.target.closest('button'))return;
+ v2.set(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight)*2+1);ray.setFromCamera(v2,camera);
+ const hit=ray.intersectObjects(bottles,true)[0];
+ if(hit){const r=hit.object.userData.root;select(bottles.indexOf(r))}
+});
+
+// ---------- loop ----------
+function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix()}
+addEventListener('resize',resize);resize();
+const A={p:new THREE.Vector3(0,2.6,8.2),l:new THREE.Vector3(0,.7,0)},B={p:new THREE.Vector3(0,5.2,6.4),l:new THREE.Vector3(0,1.3,0)};
+const tmp=new THREE.Vector3(),look=new THREE.Vector3(),dir=new THREE.Vector3(),right=new THREE.Vector3();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function show(id,on){$(id).classList.toggle('show',on&&sel<0)}
+function tick(t){
+ requestAnimationFrame(tick);
+ const max=document.documentElement.scrollHeight-innerHeight;
+ if(sel<0)p=clamp(scrollY/max,0,1);
+ ps+=(p-ps)*.07;
+ const cam=ease(clamp(ps/.6,0,1)),openA=ease(clamp((ps-.2)/.3,0,1)),lift=ease(clamp((ps-.5)/.35,0,1));
+ const k=innerWidth/innerHeight<1?1+(1-innerWidth/innerHeight)*.9:1;
+ tmp.lerpVectors(A.p,B.p,cam);look.lerpVectors(A.l,B.l,cam);
+ tmp.sub(look).multiplyScalar(k).add(look);
+ camera.position.copy(tmp);camera.lookAt(look);
+ hinge.rotation.x=-openA*1.9;
+ boxG.rotation.y=(sel<0?Math.sin(t*.0003)*.18*(1-cam)+mx*.25*(1-cam):0)+(reduce?0:0);
+ camera.getWorldDirection(dir);right.crossVectors(dir,camera.up).normalize();
+ const wide=innerWidth>800;
+ bottles.forEach((b,i)=>{
+  const u=b.userData,isSel=i===sel;
+  const restY=-.35+lift*1.75+1.05*.7;
+  const rest=new THREE.Vector3(u.sc.x,restY,.25);
+  let target=rest,s=.7*clamp(openA*3,0,1)+.001;
+  if(sel>-1){
+   if(isSel){target=camera.position.clone().addScaledVector(dir,4.4).addScaledVector(right,wide?-1.5:(innerHeight>innerWidth?0:-1.2)).addScaledVector(camera.up,wide?0:(innerHeight>innerWidth?1.15:0));s=wide?1.55:(innerHeight>innerWidth?1.05:1.1)}
+   else{s=.001;target=rest.clone().setY(restY-.6)}
+  }
+  b.position.lerp(target,.09);
+  b.scale.setScalar(b.scale.x+(s-b.scale.x)*.09);
+  b.visible=b.scale.x>.01;
+  if(isSel){if(!dragging){vel*=.96;if(Math.abs(vel)<.004)vel=.004;rotY+=vel}
+   b.rotation.y+=(rotY-b.rotation.y)*.15}
+  else{b.rotation.y+=(Math.sin(t*.0006+i)*.25-b.rotation.y)*.05}
+ });
+ if(sel<0){
+  show('hero',ps<.12);show('hint',ps<.06);show('concept',ps>.22&&ps<.5);show('choose',ps>.88);
+ }
+ renderer.render(scene,camera);
+}
+requestAnimationFrame(tick);
+setTimeout(()=>{$('loader').style.opacity=0;setTimeout(()=>$('loader').remove(),1000)},900);
+</script>
+</body>
+</html>
